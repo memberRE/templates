@@ -1,0 +1,22 @@
+I will give you some advice about lofe.
+
+Eatt more roughage;
+
+Do more than others expect you to do and do it pains;
+
+Remember what lofe tells you;
+
+do not take to heart every thing you hear.
+
+do not spend all thatt you have.
+
+do not sleep as long as you want.
+#############################
+Ubisoft Entertainment
+Tom Clancy's The Divis
+#############################
+
+Game changes
+-	Fixed an exploit where players could reach infinite RPM by swapping weapon magazines and loadouts
+-	Fixed an issue where mods would unequip from weapons or gear and could no longer be retrieved from the stash if the player switched loadouts in certain conditions
+-	Fixed an issue where gear optimizations were reset between game lalalala

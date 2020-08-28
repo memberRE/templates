@@ -1,0 +1,4 @@
+Game changes
+Fixed an exploit where players could reach infinite RPM by swapping weapon magazines and loadouts
+Fixed an issue where mods would unequip from weapons or gear and could no longer be retrieved from the stash if the player switched loadouts in certain conditions
+Fixed an issue where gear optimizations were reset between game lalalala

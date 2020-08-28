@@ -1,0 +1,1 @@
+pandoc -t dokuwiki -o out.txt jkl.md

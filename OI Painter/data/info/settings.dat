@@ -1,0 +1,31 @@
+self.status='main'
+self.screen_size=[800, 600]
+self.screen = pygame.display.set_mode(self.screen_size, pygame.RESIZABLE)
+pygame.display.set_caption("OI Painter   Beta 1.3")
+icon = "data//img//icon.png"
+ico = pygame.image.load(icon).convert_alpha()  
+pygame.display.set_icon(ico)
+self.bg_color=[255, 255, 255]
+self.leftlist_size=90
+self.leftlist_color=[0, 155, 255]
+self.objlist=objlist
+self.leftlist_mode='graph'
+self.modeid=0
+self.eventstate=[0, 0]
+self.tool=None
+self.nodecnt=1
+self.nodesize=20
+self.nodecolor=[0, 0, 0]
+self.edgecolor=[0, 0, 0]
+self.nodecolor2=self.edgecolor2=[255, 75, 125]
+self.nodecolor3=self.edgecolor3=[255, 0, 255]
+self.lastnode=None
+self.lastpos=None
+self.display=None
+self.keyname=None
+self.textsel=None
+self.arraysel=[None, 0, 0]
+self.time=0
+self.guide=0
+self.highlights=[[255, 0, 0], [255, 125, 0], [255, 255, 0], [0, 255, 0], [0, 125, 255], [125, 0, 255], [0, 0, 0]]
+self.highlight_color=0
