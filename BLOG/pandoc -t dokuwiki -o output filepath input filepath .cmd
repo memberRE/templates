@@ -1,1 +1,1 @@
-pandoc -t dokuwiki -o out.txt jkl.md
+pandoc -t dokuwiki -o out.txt ABC176.md
