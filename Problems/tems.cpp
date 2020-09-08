@@ -1,9 +1,4 @@
-#include <algorithm>
-#include <cstdio>
-#include <cstring>
-#include <iostream>
-#include <stack>
-#include <vector>
+#include <bits/stdc++.h>
 #define ls (node << 1)
 #define rs ((node << 1) | 1)
 using namespace std;

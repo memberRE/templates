@@ -1,0 +1,89 @@
+#define DIN freopen("input.txt", "r", stdin);
+#define DOUT freopen("output.txt", "w", stdout);
+#include <bits/stdc++.h>
+#include <cstdio>
+#define mem(a, b) memset(a, b, sizeof(a))
+#define REP(i, a, b) for (int i = (a); i <= (int)(b); i++)
+#define REP_(i, a, b) for (int i = (a); i >= (b); i--)
+#define pb push_back
+using namespace std;
+typedef long long LL;
+typedef std::vector<int> VI;
+typedef std::pair<int, int> P;
+int read()
+{
+    int x = 0, flag = 1;
+    char c = getchar();
+    while ((c > '9' || c < '0') && c != '-')
+        c = getchar();
+    if (c == '-')
+        flag = 0, c = getchar();
+    while (c <= '9' && c >= '0')
+    {
+        x = (x << 3) + (x << 1) + c - '0';
+        c = getchar();
+    }
+    return flag ? x : -x;
+}
+
+const int maxn = 1e6 + 5;
+bool isprime[maxn];
+int prime[maxn], cnt, a[maxn], n;
+
+bool pairwise()
+{
+    set<int> t;
+    REP(i, 1, n)
+    {
+        int x = a[i];
+        for (int j = 1; prime[j] * prime[j] <= x; j++)
+            if (x % prime[j] == 0)
+            {
+                if (t.count(prime[j]))
+                    return 0;
+                t.insert(prime[j]);
+                while (x % prime[j] == 0)
+                    x /= prime[j];
+            }
+        if (x > 1)
+        {
+            if (t.count(x))
+                return 0;
+            t.insert(x);
+        }
+    }
+    return 1;
+}
+
+bool setwise()
+{
+    int x = a[1];
+    REP(i, 2, n)
+    x = __gcd(x, a[i]);
+    return x == 1;
+}
+
+int main()
+{
+    REP(i, 2, 1000000)
+    isprime[i] = 1;
+    for (int i = 2; i <= 10000; i++)
+        if (isprime[i])
+            for (int j = i * i; j <= 1000000; j += i)
+                isprime[j] = 0;
+    for (int i = 2; i <= 1000000; i++)
+        if (isprime[i])
+            prime[++cnt] = i;
+
+    n = read();
+    REP(i, 1, n)
+    a[i] = read();
+    if (pairwise())
+        puts("pairwise coprime");
+    else if (setwise())
+        puts("setwise coprime");
+    else
+        puts("not coprime");
+
+    return 0;
+}

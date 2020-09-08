@@ -28,6 +28,7 @@
         "ostream": "cpp",
         "cstring": "cpp",
         "random": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "*.txt": "cpp"
     }, // 同上
 }

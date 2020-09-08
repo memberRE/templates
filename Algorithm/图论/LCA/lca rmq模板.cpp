@@ -38,7 +38,7 @@ void ST(int k)
     for(int i=1;i<=k;i++)
         st[0][i]=eu[i];
     for(int j=1;(1<<j)<=k;j++)
-        for(int i=1;i+(1<<j)<=k;i++)
+        for(int i=1;i+(1<<j) -1<=k;i++)
             st[j][i]=getmin(st[j-1][i],st[j-1][i+(1<<j-1)]);
 }
 int rmq(int l,int r)
