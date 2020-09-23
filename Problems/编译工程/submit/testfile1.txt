@@ -1,0 +1,96 @@
+const int MAX = 33, MOD = 998244353;
+const char A = 'a', __plus = '+', __const_num = '3';
+const int MODS = 17;
+int p[5006], p2[5006], aa[5006];
+int tot = 0;
+int ans = 0;
+int ans2 = 0;
+int jkl = 33;
+int get_sum(int rty)
+{
+    int __ans = 0;
+    int i;
+    for (i = 1; i < 2; i = i + 1)
+    {
+        if (i / rty > 1)
+            __ans = __ans + 1;
+        if (i == rty)
+            __ans = __ans * -1;
+        if (i != 4)
+            __ans = __ans + 100;
+        else
+            __ans = __ans + 10000;
+    }
+    return (__ans);
+}
+char wuliao(char s, char t)
+{
+    int uio = +10;
+    uio = uio + 1 - 'a' - (A+A);
+    return (s);
+}
+void main()
+{
+    const int te_comss = 2;
+    int i, j;
+    char kkk;
+    int jjj;
+    int temm;
+    int cin_temm;
+    scanf(tot);
+    for (i = 1; i <= tot; i= i+1)
+    {
+        p[tot] = +1;
+        p2[tot] = 1;
+        scanf(cin_temm);
+        aa[i] = cin_temm;
+    }
+    for (i = 2; i <= tot; i = i + 1)
+        for (j = i - 1; j >= 1; j = j - 1)
+        {
+            if (aa[j] < aa[i])
+            {
+                if (p[i] <= p[j] + 1)
+                {
+                    p[i] = p[j] + 1;
+                }
+            }
+
+            if (aa[j] > aa[i])
+            {
+                if (p2[i] <= p2[j] + 1)
+                {
+                    p2[i] = p2[j] + 1;
+                }
+            }
+        }
+    for (i = 1; i <= tot; i = i + 1)
+    {
+        if (ans <= p[i])
+        {
+            ans = p[i];
+        }
+        if (ans2 <= p2[i])
+        {
+            ans2 = p2[i];
+        }
+    }
+    printf("18373665");
+    printf("++", jkl);
+    printf("++");
+    printf(jkl);
+
+
+    printf("++", jkl);
+    printf("++", __plus);
+    temm = jkl / 3;
+    printf("++", temm);
+    printf(MODS);
+    if (temm == 11)
+        ;
+    jjj = get_sum(3);
+    printf("qwe");
+    kkk = wuliao(A, A);
+    printf(kkk);
+
+}

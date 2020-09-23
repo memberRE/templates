@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1600870177 source:c:\users\member\desktop\cpp\problems\compiler\lexala.cpp
+	"LexAla.h"
+	<algorithm>
+	<cctype>
+	<ctype.h>
+	<fstream>
+	<iostream>
+	<map>
+	<stdio.h>
+	<string>
+
+1600870587 c:\users\member\desktop\cpp\problems\compiler\lexala.h
+	<fstream>
+	<iomanip>
+	<iostream>
+	<string>
+
+1600870202 source:c:\users\member\desktop\cpp\problems\compiler\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<algorithm>
+	"LexAla.h"
+

@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1600871102 source:d:\file\uni3_shang\compile\compiler\word_analys\words\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"symbol.h"
+	"function.h"
+
+1600862508 d:\file\uni3_shang\compile\compiler\word_analys\words\symbol.h
+
+1600869767 d:\file\uni3_shang\compile\compiler\word_analys\words\function.h
+
+1600871125 source:d:\file\uni3_shang\compile\compiler\word_analys\words\test.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1600872031 source:c:\users\member\desktop\cpp\problems\hhc\words\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"symbol.h"
+	"function.h"
+
+1600862508 c:\users\member\desktop\cpp\problems\hhc\words\symbol.h
+
+1600869767 c:\users\member\desktop\cpp\problems\hhc\words\function.h
+
