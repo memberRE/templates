@@ -1,13 +1,12 @@
 #include<fstream>
-#include <iomanip>
 #include<iostream>
 #include<string>
 using namespace std;
 enum symType{
-    IDENFR,//±êÊ¶·û
-    INTCON,//ÕûÐÍ Á¿
-    CHARCON,//×Ö·û³£Á¿
-    STRCON,//×Ö·û´®
+    IDENFR,//ï¿½ï¿½Ê¶ï¿½ï¿½
+    INTCON,//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+    CHARCON,//ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
+    STRCON,//ï¿½Ö·ï¿½ï¿½ï¿½
     CONSTTK,//const
     INTTK,//int
     CHARTK,//char
@@ -44,7 +43,9 @@ enum symType{
     LBRACE,
     RBRACE,
     EOFTK,
-    ILLEGAL
+    ILLEGAL,
+    SIGQUO,
+    DOUQUO
 };
 
 
@@ -52,14 +53,20 @@ enum symType{
 class LexAnalyzer
 {
 public:
+    char now_ch;
     void get_sym();
     void get_nex_char();
     void get_nex_string();
     void startAna();
     void OUT();
+    void initStr2Type();
+    void OUT(int index);
     ifstream &file_in;
     ofstream &file_out;
-    LexAnalyzer (ifstream &ff_in,ofstream & ff_out) : file_in(ff_in),file_out(ff_out) {}
+    LexAnalyzer (ifstream &ff_in,ofstream & ff_out) : file_in(ff_in),file_out(ff_out) {
+        initStr2Type();
+        now_ch = file_in.get();
+    }
 private:
 
 };

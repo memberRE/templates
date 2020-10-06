@@ -46,7 +46,7 @@ void suffix_array()
 			rk[sa[i]]=(sec[sa[i-1]]==sec[sa[i]] and sec[sa[i-1]+w]==sec[sa[i]+w]) ? p : ++p;
 	}
 	for(int i=1;i<=N;i++)
-		printf("%d ",sa[i]);
+		printf("%d ",rk[i]);
 }
 void get_height()
 {

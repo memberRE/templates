@@ -7,21 +7,20 @@
 #include <map>
 #include <stdio.h>
 #include <string>
+#include <vector>
 #define DEBUG
+//#define Lexout
 using namespace std;
-//static string now_string = "";
-static char now_ch = ' ';
-static int integer_read;
-static string str_read = "";
-static string lower_str_read = "";
-static int line_num = 1; // line number
-static symType now_type;
-static map<string, symType> str2type;
-static map<symType, string> type2str;
-// LexAnalyzer::LexAnalyzer(ifstream &ff_in)
-// {
-//     file_in = ff_in;
-// }
+//static char now_ch = ' ';
+int integer_read;
+string str_read = "";
+string lower_str_read = "";
+int line_num = 1; // line number
+symType now_type;
+map<string, symType> str2type;
+map<symType, string> type2str;
+vector<pair<symType, string>> lexRes;
+
 ostream &operator<<(ostream &ofs, symType st)
 {
     ofs << type2str[st];
@@ -160,10 +159,10 @@ void LexAnalyzer::get_nex_string()
             break;
         str_read.push_back(now_ch);
     }
-    now_ch = file_in.get();//跳过下一个双引号
+    now_ch = file_in.get(); //跳过下一个双引号
 }
 
-inline void initStr2Type()
+void LexAnalyzer::initStr2Type()
 {
     str2type.insert({"const", CONSTTK});
     type2str.insert({CONSTTK, "CONSTTK"});
@@ -223,32 +222,58 @@ inline void initStr2Type()
 }
 void LexAnalyzer::OUT()
 {
-    if (now_type == ILLEGAL || now_type == EOFTK)
+    if (now_type == ILLEGAL || now_type == EOFTK || now_type == SIGQUO || now_type == DOUQUO)
         return;
 #ifdef DEBUG
     cout << now_type << ' ' << str_read << endl;
 #endif
     file_out << now_type << ' ' << str_read << endl;
 }
+void LexAnalyzer::OUT(int index)
+{
+    symType temsym = lexRes[index].first;
+    if (temsym == ILLEGAL || temsym == EOFTK || temsym == SIGQUO || temsym == DOUQUO)
+        return;
+#ifdef DEBUG
+    cout << temsym << ' ' << lexRes[index].second << endl;
+#endif
+    file_out << temsym << ' ' << lexRes[index].second << endl;
+}
 void LexAnalyzer::startAna()
 {
-    initStr2Type();
-    now_ch = file_in.get(); // 必须
+    //initStr2Type();
+    //now_ch = file_in.get(); // 必须
+    //前面加了，上面俩行就注释了
     get_sym();
     while (now_type != EOFTK)
     {
+#ifdef Lexout
         OUT();
+#else
+        lexRes.push_back({now_type, str_read});
+#endif
         if (now_type == ILLEGAL)
         {
+            lexRes.pop_back(); //保证最后的结果不出现非法字符例如单双引号
             if (str_read[0] == '\'')
             {
+                //lexRes[lexRes.size() - 1].first = SIGQUO;
                 get_nex_char();
+#ifdef Lexout
                 OUT();
+#else
+        lexRes.push_back({now_type, str_read});
+#endif
             }
             else if (str_read[0] == '\"')
             {
+                //lexRes[lexRes.size() - 1].first = DOUQUO;
                 get_nex_string();
+#ifdef Lexout
                 OUT();
+#else
+        lexRes.push_back({now_type, str_read});
+#endif
             }
         }
         get_sym();

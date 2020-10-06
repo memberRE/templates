@@ -25,6 +25,11 @@
         "cstdio": "cpp",
         "algorithm": "cpp",
         "ostream": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "vector": "cpp",
+        "utility": "cpp",
+        "iostream": "cpp"
     }, // 同上
 }

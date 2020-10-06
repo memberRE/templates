@@ -2,14 +2,16 @@
 #include <fstream>
 #include <string>
 #include <algorithm>
-#include "LexAla.h"
+#include "GrammaAna.h"
 using namespace std;
 int main()
 {
     ifstream fin("testfile.txt");
     ofstream fout("output.txt");
     LexAnalyzer lexanaly(fin,fout);
-    lexanaly.startAna();
+    //lexanaly.startAna();
+    GrammaAna grammaAnaly(fin, fout, lexanaly);
+    grammaAnaly.startGramAna();
     fin.close();
     fout.close();
 }

@@ -64,6 +64,9 @@
         "ios": "cpp",
         "xiosbase": "cpp",
         "locale": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "queue": "cpp",
+        "initializer_list": "cpp",
+        "stack": "cpp"
     }, // 同上
 }
