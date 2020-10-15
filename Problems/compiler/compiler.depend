@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1600870177 source:c:\users\member\desktop\cpp\problems\compiler\lexala.cpp
+1601830040 source:c:\users\member\desktop\cpp\problems\compiler\lexala.cpp
 	"LexAla.h"
 	<algorithm>
 	<cctype>
@@ -9,17 +9,31 @@
 	<map>
 	<stdio.h>
 	<string>
+	<vector>
 
-1600870587 c:\users\member\desktop\cpp\problems\compiler\lexala.h
+1601813981 c:\users\member\desktop\cpp\problems\compiler\lexala.h
 	<fstream>
-	<iomanip>
 	<iostream>
 	<string>
 
-1600870202 source:c:\users\member\desktop\cpp\problems\compiler\main.cpp
+1601968087 source:c:\users\member\desktop\cpp\problems\compiler\main.cpp
 	<iostream>
 	<fstream>
 	<string>
 	<algorithm>
+	"GrammaAna.h"
+
+1601958575 source:c:\users\member\desktop\cpp\problems\compiler\grammaana.cpp
+	"GrammaAna.h"
+	<map>
+	<set>
+	<vector>
+	<wchar.h>
+
+1601957202 c:\users\member\desktop\cpp\problems\compiler\grammaana.h
 	"LexAla.h"
+	<fstream>
+	<iomanip>
+	<iostream>
+	<string>
 

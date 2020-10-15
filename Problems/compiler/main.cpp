@@ -13,5 +13,6 @@ int main()
     GrammaAna grammaAnaly(fin, fout, lexanaly);
     grammaAnaly.startGramAna();
     fin.close();
+
     fout.close();
 }
