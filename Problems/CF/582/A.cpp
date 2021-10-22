@@ -8,6 +8,7 @@ int main()
 	{
 		int k;
 		scanf("%d",&k);
+		    //12321312
 		if(k%2==0)
 			o++;
 		else

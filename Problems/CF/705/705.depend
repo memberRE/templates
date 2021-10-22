@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1615040126 source:c:\users\member\desktop\cpp\problems\cf\705\a.cpp
+	<algorithm>
+	<cstdio>
+	<cstring>
+	<iostream>
+	<cmath>
+	<vector>
+
+1615040946 source:c:\users\member\desktop\cpp\problems\cf\705\b.cpp
+	<algorithm>
+	<cstdio>
+	<cstring>
+	<iostream>
+	<cmath>
+	<vector>
+
+1615042460 source:c:\users\member\desktop\cpp\problems\cf\705\c.cpp
+	<algorithm>
+	<cstdio>
+	<cstring>
+	<iostream>
+	<cmath>
+	<vector>
+
